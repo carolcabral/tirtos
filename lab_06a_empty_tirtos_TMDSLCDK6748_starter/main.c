@@ -24,15 +24,8 @@
 // Peripheral Driver Header Files
 #include <ti/board/board.h>                                                     // Board init enables C6748 modules (e.g. GPIO Module)
 
-
-//***** Prototypes ************************************************************
-
-
-//***** Defines ***************************************************************
-
-
-//***** Global Variables ******************************************************
-
+//***** Library Files **********************************************************
+#include "myGpio.h"
 
 //*****************************************************************************
 // Main
@@ -42,6 +35,8 @@ void main(void)
     // Initialize Peripherals
     Board_init(BOARD_INIT_PINMUX_CONFIG |                                       // Initialize PinMux registers and GPIO Module/Clock
                BOARD_INIT_MODULE_CLOCK);
+
+    myGpio_init();
 
     BIOS_start();                                                               // Start TI-RTOS (SYS/BIOS kernel) services - it does not return
 }
