@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="xconfig_release" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/release_pe674.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="/home/ana/workspace/tirtos-workspace/tirtosCfg_common_TMDSLCDK6748_starter/release.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/release_pe674.mak" src="package.bld"/>
+        <srcFile name="package/cfg/release_pe674.oe674.dep" src="package/cfg/release_pe674.c"/>
+        <srcFile name="package/cfg/release_pe674.dep" src="package/cfg/release_pe674.cfg"/>
+        <srcFile name="package/cfg/release.xe674.mak" src="package.bld"/>
+        <srcFile name="package/rel/xconfig_release.tar.dep" src="package/rel/xconfig_release.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.elf.C674"
+            version="ti.targets.elf.C674{1,0,8.3,5"
+            rawVersion="8.3.5"
+            platform="ti.platforms.evmDA830"
+            isa="674"
+            suffix="e674"
+            rootDir="/home/ana/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5"
+            os="undefined"
+            rts="ti.targets.rts6000">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="release"
+        pname="release.pe674"
+        target="ti.targets.elf.C674"
+        platform="ti.platforms.evmOMAPL138"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/release_pe674.cfg"
+        xCfgPrefix="package/cfg/release_pe674"
+        cfgScript="/home/ana/workspace/tirtos-workspace/tirtosCfg_common_TMDSLCDK6748_starter/release.cfg"
+        cfgArgs="null"
+        />
+    </configurations>
+    <executables>
+    <executable name="release"
+        pname="release.xe674"
+        target="ti.targets.elf.C674"
+        platform="ti.platforms.evmOMAPL138"
+        profile="release"
+        xCfgScript="package/cfg/release_pe674.cfg"
+        xCfgPrefix="package/cfg/release_pe674"
+        cfgScript="/home/ana/workspace/tirtos-workspace/tirtosCfg_common_TMDSLCDK6748_starter/release.cfg"
+        cfgArgs="null"
+        />
+    </executables>
+    <tests>
+    <test exeName="release.xe674"
+        args=""
+        groupName="release.xe674"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="xconfig_release"
+        pname="xconfig_release.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>
