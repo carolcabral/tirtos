@@ -2,3 +2,5 @@
 .jxbrowser-data/
 RemoteSystemsTempFiles/
 */Debug/
+*.settings*
+*.launches*
